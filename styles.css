@@ -350,3 +350,7 @@ footer {
   /* Estilos para pantallas pequeñas (por ejemplo, smartphones) */
   /* Aquí puedes modificar tamaños de fuente, márgenes, etc. */
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
