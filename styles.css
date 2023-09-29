@@ -7,16 +7,19 @@ body {
   padding: 0;
 }
 
-/* Estilo del encabezado */
+/* Estilo para el encabezado */
 header {
   background-color: #15162B; /* Azul profundo */
   padding: 20px 0;
   text-align: center;
 }
 
-header img {
-  max-width: 100%;
-  height: auto;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Estilo para la navegación */
@@ -24,25 +27,48 @@ nav {
   background-color: #15162B; /* Azul profundo */
   text-align: center;
   padding: 10px 0;
+  flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
 }
 
 nav ul {
-  list-style: none; /* Elimina los puntos de la lista */
-  display: flex; /* Muestra los elementos de la lista en línea */
-  justify-content: center; /* Centra horizontalmente los elementos */
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos del menú */
+  align-items: center; /* Centra verticalmente los elementos del menú */
   padding: 0;
+}
+
+nav li {
+  margin: 0 20px; /* Margen en los elementos del menú */
 }
 
 nav a {
   text-decoration: none;
-  color: #fff; /* Texto blanco */
+  color: #fff;
   font-size: 18px;
-  margin: 0 20px;
   transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-  color: #9F8E60; /* Dorado al pasar el cursor */
+  color: #9F8E60;
+}
+
+
+/* Estilo para el botón "Contáctanos" */
+.contact-button {
+  background-color: #9F8E60;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: #15162B;
 }
 
 /* Contenedor principal */
@@ -85,6 +111,23 @@ section p {
 .vision {
   background-color: #15162B; /* Fondo azul profundo */
   color: #fff; /* Texto blanco */
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+/* Estilo para la sección de Visión */
+.vision p {
+  background-color: #15162B;
+  color: #fff; /* Cambia el color del texto a blanco */
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para la sección de Misión */
+.mision p {
+  background-color: #9F8E60;
+  color: #fff; /* Cambia el color del texto a blanco */
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -176,13 +219,27 @@ footer {
 
 /* Estilo para la sección de héroe */
 .hero {
-  background-image: url('imagenes/fondo2prueba.jpg'); /* Reemplaza con la URL de tu imagen */
-  background-size: auto 200%; /* Ajusta el valor '150%' según tus necesidades */
+  background-image: url('imagenes/fondoprueba.jpg');
+  background-size: auto 200%;
   background-position: center;
   color: #fff;
   text-align: center;
   padding: 50px 0;
-  height: 50vh; /* Esto asegura que la sección tenga el alto de la ventana visible */
+  height: 50vh;
+  /* Nueva regla para sombra de texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra suave al texto */
+}
+
+/* Efecto de superposición de color */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color de superposición semi-transparente */
+  z-index: -1; /* Coloca la superposición detrás del contenido de la sección */
 }
 
 /* Resto del estilo se mantiene igual */
@@ -196,6 +253,22 @@ footer {
   margin-bottom: 30px;
 }
 
+/* Estilo para el botón en la sección de héroe */
+.hero .cta-button {
+  background-color: #9F8E60;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero .cta-button:hover {
+  background-color: #15162B;
+}
+
+
 .imagen-destacada {
   background: transparent; /* Fondo transparente (opcional) */
   text-align: center; /* Alinea el contenido al centro (opcional) */
@@ -205,4 +278,75 @@ footer {
 .imagen-destacada img {
   width: 100%; /* Ajusta el ancho al 100% del contenedor */
   height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Estilo para el botón "Contáctanos" */
+.contact-button {
+  background-color: #9F8E60; /* Color de fondo */
+  color: #fff; /* Texto en color blanco */
+  padding: 10px 20px; /* Espaciado interior del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  float: right; /* Ubica el botón a la derecha */
+  margin-right: 20px; /* Espacio a la derecha del botón */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease-in-out; /* Transición suave */
+}
+
+.contact-button:hover {
+  background-color: #15162B; /* Cambio de color al pasar el mouse */
+}
+/* Estilo para el contenedor del logo y el texto "JOB U" */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para el logo */
+.logo {
+  max-width: 100px; /* Ancho máximo del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto "JOB U" */
+}
+
+/* Estilo para el texto "JOB" con borde */
+.job-text {
+  font-size: 140px; /* Tamaño grande */
+  color: #9F8E60; /* Color de relleno */
+  -webkit-text-stroke: 0.8px #fff; /* Borde blanco */
+  text-shadow: 2px #fff; /* Borde blanco */
+  padding: 5px 10px; /* Espaciado interior */
+}
+
+
+/* Estilo para la letra "U" */
+.u-text {
+  font-size: 140px; /* Tamaño grande */
+  color: #15162B; /* Color #15162B */
+  -webkit-text-stroke: 0.8px #fff; /* Borde blanco */
+  text-shadow: 2px #fff; /* Borde blanco */
+  padding: 5px 10px; /* Espaciado interior */
+}
+
+
+
+/* Para quitar las acotaciones */
+.info-adicional {
+  display: none; /* Oculta la sección de acotaciones */
+}
+
+/* Para cambiar el color de los enlaces */
+.footer-links ul li a {
+  color: #555; /* Cambia el color a gris (#555) o al que prefieras */
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+  color: #9F8E60; /* Cambia el color al dorado (#9F8E60) al pasar el cursor */
+}
+
+@media (max-width: 768px) {
+  /* Estilos para pantallas pequeñas (por ejemplo, smartphones) */
+  /* Aquí puedes modificar tamaños de fuente, márgenes, etc. */
 }
