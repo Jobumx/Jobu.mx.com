@@ -212,11 +212,12 @@ footer {
 }
 
 .nota-al-pie {
-  max-width: 1200px; /* Ancho máximo de 100px */
-  border: 10px solid #9F8E60; /* Borde azul de 5px */
-  margin: 0 auto; /* Centrar horizontalmente */
+  max-width: 100%;
+  height: auto;
+  max-height: 150px; /* Cambia este valor según tus necesidades */
+  border: 10px solid #9F8E60;
+  margin: 0 auto;
 }
-
 /* Estilo para la sección de héroe */
 .hero {
   background-image: url('imagenes/fondoprueba.jpg');
