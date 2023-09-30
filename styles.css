@@ -212,12 +212,11 @@ footer {
 }
 
 .nota-al-pie {
-  max-width: 100%;
-  height: auto;
-  max-height: 150px; /* Cambia este valor según tus necesidades */
-  border: 10px solid #9F8E60;
-  margin: 0 auto;
+  max-width: 1200px; /* Ancho máximo de 100px */
+  border: 10px solid #9F8E60; /* Borde azul de 5px */
+  margin: 0 auto; /* Centrar horizontalmente */
 }
+
 /* Estilo para la sección de héroe */
 .hero {
   background-image: url('imagenes/fondoprueba.jpg');
@@ -320,7 +319,6 @@ footer {
   padding: 5px 10px; /* Espaciado interior */
 }
 
-
 /* Estilo para la letra "U" */
 .u-text {
   font-size: 140px; /* Tamaño grande */
@@ -329,8 +327,6 @@ footer {
   text-shadow: 2px #fff; /* Borde blanco */
   padding: 5px 10px; /* Espaciado interior */
 }
-
-
 
 /* Para quitar las acotaciones */
 .info-adicional {
@@ -350,8 +346,17 @@ footer {
 @media (max-width: 768px) {
   /* Estilos para pantallas pequeñas (por ejemplo, smartphones) */
   /* Aquí puedes modificar tamaños de fuente, márgenes, etc. */
-}
-img {
-  max-width: 100%;
-  height: auto;
+  nav ul {
+    flex-direction: column; /* Cambia la dirección de la lista a columna */
+    text-align: center; /* Centra el texto en la columna */
+  }
+
+  nav li {
+    margin: 10px 0; /* Espacio entre elementos de la lista */
+  }
+
+  .contact-button {
+    float: none; /* Elimina la flotación para centrar el botón */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+  }
 }
