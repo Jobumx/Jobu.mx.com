@@ -97,7 +97,7 @@ nav {
 }
 
 .nav .enlaces-header a {
-    color: #5D6678;
+    color: #fff;
     text-decoration: none;
     margin-left: 20px;
 }
@@ -175,6 +175,28 @@ nav {
     font-size: 50px;
 }
 
+.btn-jobber {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    width: auto; /* Establece el ancho automático para igualar el tamaño */
+    margin: 0 10px; /* Agrega margen horizontal entre los botones si es necesario */
+}
+/* Estilo adicional si es necesario */
+.btn-jobber:nth-child(1) {
+    background-color: #9F8E60;
+    color: #fff;
+}
+
+.btn-jobber:nth-child(2) {
+    background-color: #9F8E60;
+    color: #fff;
+}
+
 /* About us */
 
 .about-us {
@@ -238,6 +260,56 @@ nav {
 }
 
 /* Questions */
+/* Estilo para la imagen dentro de la sección de preguntas */
+.questions .imagen-ampliable img {
+    max-width: 100%;
+    height: auto; /* Mantendrá la proporción original de la imagen */
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Efecto de transición al hacer clic */
+}
+
+/* Estilo para el enlace que amplía la imagen */
+.questions .imagen-ampliable {
+    display: inline-block; /* Para que el enlace ocupe solo el espacio necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#imagen-ampliada-contenedor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#imagen-ampliada-contenedor img {
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+/* Estilo para la imagen cuando se hace clic */
+.questions .imagen-ampliable img:hover {
+    transform: scale(1.1); /* Efecto de ampliación al hacer clic */
+}
+/* Estilo para el fondo semitransparente */
+#imagen-ampliada-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semitransparente */
+    z-index: 999; /* Coloca el fondo sobre otros elementos */
+    display: none; /* Inicialmente oculto */
+}
 
 
 .questions {
@@ -248,7 +320,10 @@ nav {
 }
 
 .questions>img {
-    width: 550px;
+    width: 550px; /* Ajusta el tamaño máximo de la imagen al 100% del contenedor */
+    display: block; /* Elimina cualquier espacio adicional debajo de la imagen */
+    margin-top: 40px; /* Agrega espacio superior entre la imagen y el texto */
+    margin-bottom: 40px; /* Agrega espacio inferior entre la imagen y el texto */
 }
 
 .textos-questions {
@@ -296,6 +371,10 @@ nav {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+/* Aplica este estilo para quitar el subrayado de los enlaces */
+.number a {
+    text-decoration: none;
+}
 
 .numbers .number {
     width: 45%;
@@ -308,10 +387,12 @@ nav {
 
 .numbers .number h4 {
     color: #fff;
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 300;
     margin-bottom: 20px;
+    /* Agrega esta línea para permitir el salto de palabras */
 }
+
 
 .numbers .number p {
     color: #f2f5fc;
@@ -325,12 +406,16 @@ nav {
 .results-text h4 {
     color: #fff;
     font-size: 40px;
+    text-align: left; /* Alinea el texto a la derecha */
+    margin-top: 20px; /* Agrega espacio en la parte superior */
 }
 
 .results-text p {
     color: #fff;
     font-weight: 300;
     margin: 20px 0;
+    text-align: left; /* Alinea el texto a la derecha */
+    margin-top: 20px; /* Agrega espacio en la parte superior */
 }
 
 
@@ -418,7 +503,6 @@ footer {
 
 .social-media i {
     font-size: 20px;
-    display: inline-block;
     color: #adb6c7;
     border: 1px solid #adb6c7;
     border-radius: 50%;
@@ -426,10 +510,9 @@ footer {
     height: 38px;
     line-height: 36px;
     cursor: pointer;
-    margin-top: 20px;
     text-align: center;
     transition: all ease-in-out .3s;
-    margin-right: 5px;
+    margin-right: 5px; /* Ajusta el valor según tu preferencia */
 }
 
 .social-media i:hover {
@@ -526,6 +609,14 @@ footer {
         width: 40%;
         margin-bottom: 40px;
     }
+    .social-media {
+        display: flex; /* Cambia el display a flex para alinear los iconos horizontalmente */
+        justify-content: center; /* Centra los iconos horizontalmente */
+        margin-top: 0; /* Elimina el margen superior */
+    }
+        .social-media a {
+        margin-right: 10px; /* Añade un espacio entre los iconos */
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -551,11 +642,11 @@ footer {
 
     .enlaces-header {
         position: fixed;
-        background: #667db6;
+        background: #696875;
         /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+        background: -webkit-linear-gradient(to right, #696875, #15162B, #15162B, #696875);
         /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+        background: linear-gradient(to right, #696875, #15162B, #15162B, #696875);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         top: 0;
         right: 0;
@@ -619,5 +710,26 @@ footer {
     .partFooter {
         width: 95%;
         margin-bottom: 40px;
+    }
+    .social-media {
+        display: flex; /* Cambia el display a flex para alinear los iconos horizontalmente */
+        justify-content: center; /* Centra los iconos horizontalmente */
+        margin-top: 0; /* Elimina el margen superior */
+    }
+
+    .social-media a {
+        margin-right: 10px; /* Añade un espacio entre los iconos */
+    }
+}
+
+/* Estilo para la versión de escritorio (pantallas anchas) */
+@media screen and (min-width: 601px) {
+    .social-media {
+        display: flex; /* Alinea los iconos horizontalmente en una fila */
+        justify-content: center; /* Centra los iconos horizontalmente */
+    }
+
+    .social-media a {
+        margin-right: 10px; /* Añade un espacio entre los iconos */
     }
 }
